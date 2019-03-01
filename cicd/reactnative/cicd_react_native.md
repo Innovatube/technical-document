@@ -129,7 +129,7 @@ platform :ios do
       suppress_xcode_output: true,
       clean: true,
       output_directory: "build",
-      output_name: "ShouboTenken.ipa",
+      output_name: ""**********.ipa",
       export_options: {
         iCloudContainerEnvironment: "Development",
         provisioningProfiles: {
@@ -143,7 +143,7 @@ platform :ios do
       app_name: AC_APP_NAME_IOS,
       testing_group: AC_TEAM_INTERNAL,
       release_notes: "[Develop] Commit #{last_git_commit()[:commit_hash]} of #{last_git_commit()[:author]}",
-      file_path: "build/ShouboTenken.ipa"
+      file_path: "build/********.ipa"
     )
   end
 
@@ -156,14 +156,14 @@ platform :ios do
     )
     gym(
       project: "ios/*********.xcodeproj",
-      scheme: "shoubotenken",
+      scheme: "********",
       export_method: "ad-hoc",
       configuration: "Release",
       silent: true,
       suppress_xcode_output: true,
       clean: true,
       output_directory: "build",
-      output_name: "ShouboTenken.ipa",
+      output_name: "********.ipa",
       export_options: {
         iCloudContainerEnvironment: "Development",
         provisioningProfiles: {
@@ -177,7 +177,7 @@ platform :ios do
       app_name: AC_APP_NAME_IOS,
       testing_group: AC_TEAM_STAGING,
       release_notes: "[Staging] Commit #{last_git_commit()[:commit_hash]} of #{last_git_commit()[:author]}",
-      file_path: "build/ShouboTenken.ipa"
+      file_path: "build/********.ipa"
     )
   end
 
@@ -190,14 +190,14 @@ platform :ios do
     )
     gym(
       project: "ios/*********.xcodeproj",
-      scheme: "shoubotenken",
+      scheme: "********",
       export_method: "ad-hoc",
       configuration: "Release",
       silent: true,
       suppress_xcode_output: true,
       clean: true,
       output_directory: "build",
-      output_name: "ShouboTenken.ipa",
+      output_name: "********.ipa",
       export_options: {
         iCloudContainerEnvironment: "Development",
         provisioningProfiles: {
@@ -211,7 +211,7 @@ platform :ios do
       app_name: AC_APP_NAME_IOS,
       testing_group: AC_TEAM_CUSTOMER,
       release_notes: "[Staging] Commit #{last_git_commit()[:commit_hash]} of #{last_git_commit()[:author]}",
-      file_path: "build/ShouboTenken.ipa"
+      file_path: "build/********.ipa"
     )
   end
 end
@@ -305,14 +305,14 @@ increment_build_number(
 ``` 
 gym(
       project: "ios/*********.xcodeproj",
-      scheme: "shoubotenken",
+      scheme: "********",
       export_method: "ad-hoc",
       configuration: "Release",
       silent: true,
       suppress_xcode_output: true,
       clean: true,
       output_directory: "build",
-      output_name: "ShouboTenken.ipa",
+      output_name: "********.ipa",
       export_options: {
         iCloudContainerEnvironment: "Development",
         provisioningProfiles: {
@@ -329,7 +329,7 @@ appcenter(
       app_name: AC_APP_NAME_IOS,
       testing_group: AC_TEAM_STAGING,
       release_notes: "[Staging] Commit #{last_git_commit()[:commit_hash]} of #{last_git_commit()[:author]}",
-      file_path: "build/ShouboTenken.ipa"
+      file_path: "build/********.ipa"
     )
 ```
 + Về cơ bản lane của Android cũng tương tự bên IOS, chỉ là không cần đăng ký device.
