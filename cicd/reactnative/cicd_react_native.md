@@ -385,17 +385,7 @@ pipeline {
         stage('Inform start') {
             steps {
                 script {
-                    terSlack.message(
-                        message: "********** Build Started",
-                        color: "warning",
-                        fields: [
-                            [
-                                title: "Branch",
-                                value: env.BRANCH_NAME,
-                                short: true
-                            ]
-                        ]
-                    )
+                    terSlack.infoMessage(message: "[$PROJECT_NAME] Build Started", color: "warning")
                 }
                 sh "yarn install"
             }
@@ -422,47 +412,17 @@ pipeline {
     post {
         success {
             script {
-                terSlack.message(
-                    message: "************ Build success",
-                    color: "good",
-                    fields: [
-                        [
-                            title: "Branch",
-                            value: env.BRANCH_NAME,
-                            short: true
-                        ]
-                    ]
-                )
+                terSlack.infoMessage(message: "[$PROJECT_NAME] Build Started", color: "warning")
             }
         }
         failure {
             script {
-                terSlack.message(
-                    message: "************** Build failed",
-                    color: "danger",
-                    fields: [
-                        [
-                            title: "Branch",
-                            value: env.BRANCH_NAME,
-                            short: true
-                        ]
-                    ]
-                )
+                terSlack.infoMessage(message: "[$PROJECT_NAME] Build Started", color: "warning")
             }
         }
         aborted {
             script {
-                terSlack.message(
-                    message: "********** Build aborted",
-                    color: "danger",
-                    fields: [
-                        [
-                            title: "Branch",
-                            value: env.BRANCH_NAME,
-                            short: true
-                        ]
-                    ]
-                )
+                terSlack.infoMessage(message: "[$PROJECT_NAME] Build Started", color: "warning")
             }
         }
     }
