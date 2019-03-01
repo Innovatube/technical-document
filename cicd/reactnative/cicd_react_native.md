@@ -118,11 +118,11 @@ platform :ios do
     sh "cp", "-rf", "../.env_development", "../.env"
     increment_build_number(
       build_number: Time.now.getutc.to_i,
-      xcodeproj: "ios/shoubotenken.xcodeproj"
+      xcodeproj: "ios/*********.xcodeproj"
     )
     gym(
-      project: "ios/shoubotenken.xcodeproj",
-      scheme: "shoubotenken",
+      project: "ios/*********.xcodeproj",
+      scheme: "*********",
       export_method: "ad-hoc",
       configuration: "Release",
       silent: true,
@@ -152,10 +152,10 @@ platform :ios do
     sh "cp", "-rf", "../.env_staging", "../.env"
     increment_build_number(
       build_number: Time.now.getutc.to_i,
-      xcodeproj: "ios/shoubotenken.xcodeproj"
+      xcodeproj: "ios/*********.xcodeproj"
     )
     gym(
-      project: "ios/shoubotenken.xcodeproj",
+      project: "ios/*********.xcodeproj",
       scheme: "shoubotenken",
       export_method: "ad-hoc",
       configuration: "Release",
@@ -186,10 +186,10 @@ platform :ios do
     sh "cp", "-rf", "../.env_staging", "../.env"
     increment_build_number(
       build_number: Time.now.getutc.to_i,
-      xcodeproj: "ios/shoubotenken.xcodeproj"
+      xcodeproj: "ios/*********.xcodeproj"
     )
     gym(
-      project: "ios/shoubotenken.xcodeproj",
+      project: "ios/*********.xcodeproj",
       scheme: "shoubotenken",
       export_method: "ad-hoc",
       configuration: "Release",
@@ -284,10 +284,10 @@ AC_TEAM_CUSTOMER = "Customer"
 Tạo 1 file device.txt và add uuid device muốn test vào
 ```
 Device ID	Device Name
-4bd1cb159a52581717839dd6fb7de8cf90a21739	Nexus iPhone 7
-96ffde7fab5f456e65784e4a721c3e7165c7181a	Nexus iPhone 8
-e6abe66fb94294f3aa414ab36b902329bda4132d	Nexus iPhone 5
-99e1d4a637cde8fdb0abd41bbcbd702c3cc0f9e2	Nexus iPhone 6s plus
+********************	Nexus iPhone 7
+********************	Nexus iPhone 8
+********************	Nexus iPhone 5
+********************	Nexus iPhone 6s plus
 ```
 * Tiếp đến lane build_dev.
 + Đầu tiên copy file .env_development vào file .env (file .env là file chứa thông tin các biến môi trương như url, secret_key..):
@@ -298,13 +298,13 @@ sh "cp", "-rf", "../.env_staging", "../.env"
 ``` 
 increment_build_number(
       build_number: Time.now.getutc.to_i,
-      xcodeproj: "ios/shoubotenken.xcodeproj"
+      xcodeproj: "ios/*********.xcodeproj"
 )
 ```
 + Sau đó dùng gym build với các thông số đầu vào:
 ``` 
 gym(
-      project: "ios/shoubotenken.xcodeproj",
+      project: "ios/*********.xcodeproj",
       scheme: "shoubotenken",
       export_method: "ad-hoc",
       configuration: "Release",
@@ -386,7 +386,7 @@ pipeline {
             steps {
                 script {
                     terSlack.message(
-                        message: "*ShouboTenken* Build Started",
+                        message: "********** Build Started",
                         color: "warning",
                         fields: [
                             [
@@ -420,13 +420,10 @@ pipeline {
         }
     }
     post {
-        always {
-            sh "printenv"
-        }
         success {
             script {
                 terSlack.message(
-                    message: "*ShouboTenken* Build success",
+                    message: "************ Build success",
                     color: "good",
                     fields: [
                         [
@@ -441,7 +438,7 @@ pipeline {
         failure {
             script {
                 terSlack.message(
-                    message: "*ShouboTenken* Build failed",
+                    message: "************** Build failed",
                     color: "danger",
                     fields: [
                         [
@@ -456,7 +453,7 @@ pipeline {
         aborted {
             script {
                 terSlack.message(
-                    message: "*ShouboTenken* Build aborted",
+                    message: "********** Build aborted",
                     color: "danger",
                     fields: [
                         [
