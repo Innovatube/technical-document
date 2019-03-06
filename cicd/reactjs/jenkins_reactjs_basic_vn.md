@@ -225,4 +225,18 @@ RUN npm run build
 CMD ["npm", "start"]
 ```
 
+Về structure cho cicd hiện tại mình đang để như sau:
+
+```
+--.cicd
+        -docker
+                -web
+                    -Dockerfile
+                -docker-compose.yml
+        -jenkins
+                -Jenkinsfile
+```
+
+Và bài viết trên được để theo đường dẫn như trên, các bạn có thể tham khảo.
+
 * Chú ý: CMD chỉ thực hiện sau khi build image.
