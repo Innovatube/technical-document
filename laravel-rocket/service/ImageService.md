@@ -1,4 +1,4 @@
-# FIleUploadLocalService
+# ImageService
 Service này được dùng để xử lý ảnh
 
 ## Properties

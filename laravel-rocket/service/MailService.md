@@ -1,4 +1,4 @@
-# FIleUploadLocalService
+# MailService
 Service này được dùng để gửi mail
 
 ## Properties
