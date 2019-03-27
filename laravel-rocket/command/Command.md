@@ -1,47 +1,47 @@
 ####```php artisan rocket:export:table```
-Description
+TODO
 
 ####```php artisan rocket:generate:api:from-oas```
-Description
+Generate controller/request/response từ file swagger 
 
 ####```php artisan rocket:generate:from-mwb```
-Description
+Generate controller/model/repository/service
 
 ####```php artisan rocket:import:file```
-Description
+TODO
 
 ####```php artisan rocket:make:api:admin```
-Description
+Generate controller/model/repository cho admin API
 
 ####```php artisan rocket:crud:api:admin```
 Description
 
 ####```php artisan rocket:make:event```
-Description
+Tạo event/listener 
 
 ####```php artisan rocket:make:helper```
-Description
+Tạo helper
 
 ####```php artisan rocket:make:migration```
-Description
+Tạo migration 
 
 ####```php artisan rocket:make:model```
-Description
+Tạo model
 
 ####```php artisan rocket:make:respository```
-Description
+Tạo repository 
 
 ####```php artisan rocket:make:service```
-Description
+Tạo service 
 
 ####```php artisan rocket:make:service-auth-base```
-Description
+TODO
 
 ####```php artisan rocket:make:service-auth-service```
-Description
+TODO 
 
 ####```php artisan rocket:set:name```
-Description
+TODO 
 
 ####```php artisan rocket:validate```
-Description
+TODO 
